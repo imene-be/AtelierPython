@@ -2,11 +2,9 @@ from PIL import Image
 import random
 
 def noir_en_couleur_random(nom_fichier, nom_sortie):
-    # Ouvre l'image noir & blanc
     img = Image.open(nom_fichier).convert("L")
     largeur, hauteur = img.size
     
-    # Nouvelle image couleur
     color_img = Image.new("RGB", (largeur, hauteur))
     
     for x in range(largeur):
@@ -32,9 +30,7 @@ def noir_en_couleur_random(nom_fichier, nom_sortie):
             
             color_img.putpixel((x, y), (r, g, b))
     
-    # Sauvegarde l'image
     color_img.save(nom_sortie)
     print(f"✔ Image convertie en couleur aléatoire : {nom_sortie}")
 
-# Exemple d'utilisation
 noir_en_couleur_random("grenouille_bw.jpg", "grenouille_color_random.jpg")
