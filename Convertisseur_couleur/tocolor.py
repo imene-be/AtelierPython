@@ -2,6 +2,7 @@ from PIL import Image
 import random
 
 def noir_en_couleur_random(nom_fichier, nom_sortie):
+    
     img = Image.open(nom_fichier).convert("L")
     largeur, hauteur = img.size
     

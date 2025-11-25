@@ -17,7 +17,7 @@ def verifier_victoire(grille, joueur):
     return any(all(grille[i] == joueur for i in combi) for combi in combinaisons)
 
 def coup_gagnant(grille, joueur):
-    """Retourne un coup gagnant si possible, sinon None"""
+  
     for i in range(9):
         if grille[i] not in ["X","O"]:
             copie = grille[:]
